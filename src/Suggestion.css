@@ -1,0 +1,137 @@
+body{
+    background-color: #f2f2f2;
+}
+
+.suggestion-container {
+    width:70%;
+    margin: auto;
+  }
+  
+  
+  .pick-user-heading {
+    font-size: 34px;
+    color: #0080ff;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .contenteditable {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 12px;
+    font-size: 16px;
+    outline: none;
+    border-radius: 8px;
+    white-space: pre-wrap;
+  }
+  
+  .suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1;
+    border-bottom: 2px solid rgb(2, 78, 231);
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-height: 150px;
+    overflow-y: auto;
+  }
+
+  .suggestion-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .suggestion-icon {
+    margin-right: 8px; /* Adjust the margin as needed */
+  }
+  
+  .suggestion-text {
+    display: flex;
+    align-items: center;
+  }
+  
+  .suggestion-name {
+    margin-right: 20px; /* Adjust the margin as needed */
+  }
+  
+  .suggestion-email {
+    color: #666;
+    opacity: 0.8;
+  }
+
+  /* Hide scroll bar arrows and track */
+.suggestions {
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: transparent transparent; /* Firefox */
+    overflow: auto; /* Hide scroll bar arrows for WebKit */
+  }
+  
+  /* Styling the thumb (the draggable part of the scrollbar) for WebKit */
+  .suggestions::-webkit-scrollbar-thumb {
+    background-color: #ccc; /* Set to the desired color */
+    border-radius: 8px; /* Set to the desired border radius */
+  }
+  
+
+  .suggestion-image {
+    width: 24px;  /* Adjust the width as needed */
+    height: 24px; /* Adjust the height as needed */
+    margin-right: 8px; /* Add margin for spacing */
+  }
+  
+  .suggestion-name {
+    margin-right: 45px; /* Adjust the margin as needed */
+  }
+  
+  .suggestion-email {
+    color: #666; /* Dark grey color */
+    opacity: 0.8; /* Adjust the opacity as needed for a faded effect */
+  }
+  
+
+  .suggestion {
+    padding: 12px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .suggestion:last-child {
+    border-bottom: none;
+  }
+  
+  .suggestion:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .chip {
+    margin-right: 8px;
+    margin-bottom: 8px;
+    padding: 8px;
+    border-radius: 20px; /* Adjust the value to achieve the desired oval shape */
+    display: inline-block;
+    background-color: #007bff; /* You can set the background color for the chip */
+    color: #fff; /* Set the text color for the chip */
+  }
+
+  .chip-icon {
+    width: 20px; /* Adjust the width of the icon */
+    height: 20px; /* Adjust the height of the icon */
+    margin-right: 8px;
+    border-radius: 50%; /* Make the icon container circular */
+  }
+
+  .input-for-suggestions {
+    border: none;
+    
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+    outline: none; /* Remove default focus outline */
+    text-align: left;
+  }
+  
