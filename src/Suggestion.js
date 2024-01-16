@@ -57,11 +57,19 @@ const Suggestion = () => {
   };
 
   const onSuggestionSelected = (suggestion) => {
-    setSelectedNames([...selectedNames, { name: suggestion.name, email: suggestion.email, color: getRandomColor(), icon: suggestion.icon }]);
+    // Check if the selected chip is already present
+    const isChipAlreadyAdded = selectedNames.some((chip) => chip.name === suggestion.name);
+  
+    if (!isChipAlreadyAdded) {
+      // Add the chip only if it's not already present
+      setSelectedNames([...selectedNames, { name: suggestion.name, email: suggestion.email, color: getRandomColor(), icon: suggestion.icon }]);
+    }
+  
     setValue('');
     inputRef.current.innerHTML = '';
     setSuggestions([]); // Clear suggestions after selection
   };
+  
 
   const handleBackspace = (event) => {
     const content = inputRef.current.innerText;
