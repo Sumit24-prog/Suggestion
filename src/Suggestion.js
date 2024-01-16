@@ -43,9 +43,12 @@ const Suggestion = () => {
   const getSuggestions = (inputValue) => {
     const inputValueLower = inputValue.toLowerCase();
     return suggestionData.filter(
-      (item) => item.name.toLowerCase().includes(inputValueLower) || item.email.toLowerCase().includes(inputValueLower)
+      (item) =>
+        (item.name.toLowerCase().includes(inputValueLower) || item.email.toLowerCase().includes(inputValueLower)) &&
+        !selectedNames.some((selected) => selected.name === item.name)
     );
   };
+  
 
   const onSuggestionsFetchRequested = () => {
     setSuggestions(getSuggestions(inputRef.current.innerText));
